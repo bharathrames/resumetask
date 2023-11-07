@@ -1,38 +1,116 @@
-.App {
+/* Reset default list styles to hide list dots */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* A4-sized sheet layout */
+.resume-section {
+  width: 21cm; /* A4 width */
+  height: 29.7cm; /* A4 height */
+  margin: 2cm; /* Margins around the A4 sheet */
+  padding: 1cm; /* Padding inside the A4 sheet */
+  background-color: white; /* Default background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  position: relative;
+  page-break-before: always; /* Ensure a new page for each section when printing */
+  margin: 0 auto; /* Center the section horizontally */
+  /* text-align: center; */
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Apply background color and padding to the header for a consistent look */
+.resume-section h2 {
+  background-color: #333;
+  color: white;
+  padding: 0.5rem;
+}
+
+/* Styling for list items within sections */
+ul {
+  padding-left: 1rem; /* Add an indentation to the list items */
+}
+
+/* Apply styles for drag-and-drop functionality */
+ul, li {
+  user-select: none; /* Disable text selection during drag-and-drop */
+  cursor: grab;
+}
+
+/* Styles for the selected color (lightgrey or lightblue) */
+.resume-section.lightgrey {
+  background-color: lightgrey;
+}
+
+.resume-section.lightblue {
+  background-color: lightblue;
+}
+
+/* Center the "Resume Data" heading */
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Center and style the color dropdown */
+.select-container {
+  /* text-align: center; */
+  font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with your custom font */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.select-container select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'YourFont', sans-serif; /* Replace 'YourFont' with your custom font */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.select-container select:focus {
+  outline: none;
+  border-color: #007BFF; /* Add focus style */
 }
 
-.App-link {
-  color: #61dafb;
+/* Style the color picker container */
+.color-picker {
+  text-align: center;
+  margin: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style the label */
+.color-picker label {
+  font-size: 1.2rem;
+  color: #333;
 }
+
+/* Style the select dropdown */
+.custom-select {
+  width: 200px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  appearance: none; /* Remove default arrow in some browsers */
+  -webkit-appearance: none; /* Remove default arrow in older versions of Safari */
+  -moz-appearance: none; /* Remove default arrow in older versions of Firefox */
+  cursor: pointer;
+}
+
+.custom-select:focus {
+  outline: none;
+  border-color: #007BFF; /* Add focus style */
+}
+
+/* Style the dropdown options */
+.custom-select option {
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+}
+
+
