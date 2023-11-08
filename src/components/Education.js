@@ -5,7 +5,7 @@ const Education = ({ backgroundColor, onDragEnd }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/education')
+    fetch('https://resumebackend-five.vercel.app/api/education')
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching education data:', error));

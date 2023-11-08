@@ -5,7 +5,7 @@ const WorkExperience = ({ backgroundColor, onDragEnd }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/work-experience')
+    fetch('https://resumebackend-five.vercel.app/api/work-experience')
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error('Error fetching work experience data:', error));
