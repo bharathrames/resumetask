@@ -15,7 +15,7 @@ const WorkExperience = ({ backgroundColor, onDragEnd }) => {
     <div style={{ backgroundColor }} className="resume-section">
     <h2>Work Experience</h2>
     <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable droppableId="work-exper">
+      <Droppable droppableId="work-experien">
         {(provided) => (
           <ul {...provided.droppableProps} ref={provided.innerRef}>
             {data.map((item, index) => (
